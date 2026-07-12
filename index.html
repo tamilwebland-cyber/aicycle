@@ -514,7 +514,34 @@ Popular Tools
 
 </footer>
 
-<script src="js/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const search = document.getElementById("search");
+  const cards = document.querySelectorAll(".card");
+
+  if (!search) return;
+
+  search.addEventListener("input", function () {
+
+    const value = this.value.toLowerCase();
+
+    cards.forEach(function(card) {
+
+      const text = card.textContent.toLowerCase();
+
+      if (text.includes(value)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
+</script>
 
 </body>
 </html>

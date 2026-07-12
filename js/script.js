@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  alert("DOM Loaded");
 
   const search = document.getElementById("search");
 

@@ -1,20 +1,20 @@
-// Aicycle Live Search
+document.addEventListener("DOMContentLoaded", () => {
 
-const search = document.getElementById("search");
+  const search = document.getElementById("search");
+  const cards = document.querySelectorAll(".card");
 
-if (search) {
-  search.addEventListener("keyup", function () {
+  if (!search) return;
 
-    const value = this.value.toLowerCase();
+  search.addEventListener("input", () => {
 
-    const cards = document.querySelectorAll(".card");
+    const value = search.value.toLowerCase().trim();
 
     cards.forEach(card => {
 
-      const text = card.innerText.toLowerCase();
+      const text = card.textContent.toLowerCase();
 
       if (text.includes(value)) {
-        card.style.display = "block";
+        card.style.display = "";
       } else {
         card.style.display = "none";
       }
@@ -22,4 +22,5 @@ if (search) {
     });
 
   });
-}
+
+});

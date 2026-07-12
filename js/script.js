@@ -1,3 +1,4 @@
+alert("Script Loaded");
 document.addEventListener("DOMContentLoaded", () => {
 
   const search = document.getElementById("search");

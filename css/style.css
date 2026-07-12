@@ -1428,3 +1428,8 @@ font-weight:600;
 .nav-links a:hover{
 color:#4da3ff !important;
 }
+a.card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

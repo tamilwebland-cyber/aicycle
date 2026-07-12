@@ -1395,3 +1395,36 @@ border-left:5px solid #ef4444;
 background:rgba(59,130,246,.18);
 
 border-left:5
+/* Navbar Fix */
+
+.navbar .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo a{
+color:#ffffff !important;
+text-decoration:none !important;
+font-size:30px;
+font-weight:bold;
+}
+
+.logo span{
+color:#4da3ff;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+color:#ffffff !important;
+text-decoration:none !important;
+font-weight:600;
+}
+
+.nav-links a:hover{
+color:#4da3ff !important;
+}

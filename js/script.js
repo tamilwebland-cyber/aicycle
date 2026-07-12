@@ -1,26 +1,15 @@
 alert("Script Loaded");
-document.addEventListener("DOMContentLoaded", () => {
+
+document.addEventListener("DOMContentLoaded", function () {
 
   const search = document.getElementById("search");
   const cards = document.querySelectorAll(".card");
 
-  if (!search) return;
+  alert("Cards found: " + cards.length);
 
-  search.addEventListener("input", () => {
+  search.addEventListener("input", function () {
 
-    const value = search.value.toLowerCase().trim();
-
-    cards.forEach(card => {
-
-      const text = card.textContent.toLowerCase();
-
-      if (text.includes(value)) {
-        card.style.display = "";
-      } else {
-        card.style.display = "none";
-      }
-
-    });
+    alert("Typing: " + this.value);
 
   });
 

@@ -1,1 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compare AI Tools | Aicycle™</title>
+
+<meta name="description"
+content="Compare popular AI tools side by side on Aicycle. Explore ratings, pricing, categories, key strengths and best use cases to find the right AI tool for you.">
+
+<meta name="keywords"
+content="compare AI tools, best AI tools, AI tool comparison, ChatGPT vs Gemini, AI image generators, Aicycle">
+
+<meta name="author" content="Aicycle™">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* =========================
+   COMPARE TOOLS
+========================= */
+
+.compare-section {
+  padding: 50px 0;
+}
+
+.compare-intro {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.compare-selector {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.tool-select-box {
+  background: #16233f;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.tool-select-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.tool-select-box select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #3b4b6b;
+  font-size: 16px;
+  background: #ffffff;
+  color: #111111;
+}
+
+.vs-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.compare-button-wrap {
+  text-align: center;
+  margin: 30px 0 40px;
+}
+
+.compare-btn {
+  padding: 14px 35px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.compare-btn:hover {
+  opacity: 0.9;
+}
+
+/* Comparison Result */
+
+.comparison-result {
+  display: none;
+  margin-top: 40px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #16233f;
+}
+
+.comparison-cell {
+  padding: 18px;
+  border-bottom: 1px solid #334155;
+}
+
+.comparison-label {
+  font-weight: bold;
+  background: #0f1b32;
+}
+
+.comparison-tool-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.compare-tool-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.compare-message {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
+  .compare-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-circle {
+    margin: 0 auto;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 110px 1fr 1fr;
+    font-size: 13px;
+    overflow-x: auto;
+  }
+
+  .comparison-cell {
+    padding: 12px 8px;
+  }
+
+  .comparison-tool-name {
+    font-size: 16px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="container flex-between">
+
+<div class="logo">
+
+<a href="index.html">
+🚀 <span>Aicycle™</span>
+</a>
+
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="categories.html">Categories</a>
+<a href="compare.html">Compare</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<header class="hero">
+
+<div class="container">
+
+<h1>⚖️ Compare AI Tools</h1>
+
+<p>
+Not sure which AI tool is right for you? Select two tools and compare their features, pricing, ratings and best use cases side by side.
+</p>
+
+</div>
+
+</header>
+
+<section class="container compare-section">
+
+<div class="compare-intro">
+
+<h2>Choose Two AI Tools</h2>
+
+<p>
+Select the tools you want to compare. Aicycle™ will show their key differences to help you make a better choice.
+</p>
+
+</div>
+
+<div class="compare-selector">
+
+<div class="tool-select-box">
+
+<label for="tool1">
+Tool 1
+</label>
+
+<select id="tool1">
+
+<option value="">Select an AI Tool</option>
+<option value="chatgpt">ChatGPT</option>
+<option value="gemini">Google Gemini</option>
+<option value="claude">Claude</option>
+<option value="copilot">Microsoft Copilot</option>
+<option value="perplexity">Perplexity AI</option>
+<option value="github-copilot">GitHub Copilot</option>
+<option value="cursor">Cursor AI</option>
+<option value="canva">Canva AI</option>
+<option value="elevenlabs">ElevenLabs</option>
+<option value="adobe-firefly">Adobe Firefly</option>
+<option value="leonardo">Leonardo AI</option>
+<option value="ideogram">Ideogram AI</option>
+
+</select>
+
+</div>
+
+<div class="vs-circle">
+VS
+</div>
+
+<div class="tool-select-box">
+
+<label for="tool2">
+Tool 2
+</label>
+
+<select id="tool2">
+
+<option value="">Select an AI Tool</option>
+<option value="chatgpt">ChatGPT</option>
+<option value="gemini">Google Gemini</option>
+<option value="claude">Claude</option>
+<option value="copilot">Microsoft Copilot</option>
+<option value="perplexity">Perplexity AI</option>
+<option value="github-copilot">GitHub Copilot</option>
+<option value="cursor">Cursor AI</option>
+<option value="canva">Canva AI</option>
+<option value="elevenlabs">ElevenLabs</option>
+<option value="adobe-firefly">Adobe Firefly</option>
+<option value="leonardo">Leonardo AI</option>
+<option value="ideogram">Ideogram AI</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="compare-button-wrap">
+
+<button class="compare-btn" onclick="compareTools()">
+Compare Tools
+</button>
+
+<p id="compareMessage" class="compare-message"></p>
+
+  </div>
+  <div id="comparisonResult" class="comparison-result">
+
+<h2 style="text-align:center;">
+Comparison Results
+</h2>
+
+<div class="comparison-grid">
+
+<div class="comparison-cell comparison-label">
+Tool
+</div>
+
+<div class="comparison-cell comparison-tool-name" id="name1">
+-
+</div>
+
+<div class="comparison-cell comparison-tool-name" id="name2">
+-
+</div>
+
+
+<div class="comparison-cell comparison-label">
+Category
+</div>
+
+<div class="comparison-cell" id="category1">
+-
+</div>
+
+<div class="comparison-cell" id="category2">
+-
+</div>
+
+
+<div class="comparison-cell comparison-label">
+Pricing
+</div>
+
+<div class="comparison-cell" id="pricing1">
+-
+</div>
+
+<div class="comparison-cell" id="pricing2">
+-
+</div>
+
+
+<div class="comparison-cell comparison-label">
+Best For
+</div>
+
+<div class="comparison-cell" id="best1">
+-
+</div>
+
+<div class="comparison-cell" id="best2">
+-
+</div>
+
+
+<div class="comparison-cell comparison-label">
+Key Strength
+</div>
+
+<div class="comparison-cell" id="strength1">
+-
+</div>
+
+<div class="comparison-cell" id="strength2">
+-
+</div>
+
+
+<div class="comparison-cell comparison-label">
+Ease of Use
+</div>
+
+<div class="comparison-cell" id="ease1">
+-
+</div>
+
+<div class="comparison-cell" id="ease2">
+-
+</div>
+
+
+<div class="comparison-cell comparison-label">
+Rating
+</div>
+
+<div class="comparison-cell" id="rating1">
+-
+</div>
+
+<div class="comparison-cell" id="rating2">
+-
+</div>
+
+
+<div class="comparison-cell comparison-label">
+More Details
+</div>
+
+<div class="comparison-cell" id="link1">
+-
+</div>
+
+<div class="comparison-cell" id="link2">
+-
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+const tools = {
+
+chatgpt: {
+name: "ChatGPT",
+category: "AI Assistant",
+pricing: "Free / Paid plans",
+best: "Writing, brainstorming, research assistance and general AI tasks",
+strength: "Versatile conversational AI for a wide range of everyday tasks",
+ease: "Very Easy",
+rating: "⭐ 4.9/5",
+link: "tools/chatgpt.html"
+},
+
+gemini: {
+name: "Google Gemini",
+category: "AI Assistant",
+pricing: "Free / Paid plans",
+best: "General AI assistance and productivity",
+strength: "Useful AI assistant with integration across Google's ecosystem",
+ease: "Very Easy",
+rating: "⭐ 4.8/5",
+link: "tools/gemini.html"
+},
+
+claude: {
+name: "Claude",
+category: "AI Assistant",
+pricing: "Free / Paid plans",
+best: "Writing, document analysis and complex conversations",
+strength: "Strong long-form writing and document-focused assistance",
+ease: "Very Easy",
+rating: "⭐ 4.8/5",
+link: "tools/claude.html"
+},
+
+copilot: {
+name: "Microsoft Copilot",
+category: "AI Assistant",
+pricing: "Free / Paid options",
+best: "Productivity and Microsoft ecosystem users",
+strength: "AI assistance connected with Microsoft products and services",
+ease: "Easy",
+rating: "⭐ 4.7/5",
+link: "tools/microsoft-copilot.html"
+},
+
+perplexity: {
+name: "Perplexity AI",
+category: "AI Search",
+pricing: "Free / Paid plans",
+best: "Web research and finding information",
+strength: "Search-focused AI answers with source references",
+ease: "Very Easy",
+rating: "⭐ 4.8/5",
+link: "tools/perplexity.html"
+},
+
+"github-copilot": {
+name: "GitHub Copilot",
+category: "AI Coding",
+pricing: "Free eligibility / Paid plans",
+best: "Developers and software development",
+strength: "AI coding assistance integrated into developer workflows",
+ease: "Easy",
+rating: "⭐ 4.8/5",
+link: "tools/github-copilot.html"
+},
+
+cursor: {
+name: "Cursor AI",
+category: "AI Coding",
+pricing: "Free / Paid plans",
+best: "AI-assisted coding and software projects",
+strength: "AI-focused code editor designed for development workflows",
+ease: "Moderate",
+rating: "⭐ 4.8/5",
+link: "tools/cursor-ai.html"
+},
+
+canva: {
+name: "Canva AI",
+category: "AI Design",
+pricing: "Free / Paid plans",
+best: "Social media graphics, presentations and quick designs",
+strength: "Combines accessible design tools with AI-powered features",
+ease: "Very Easy",
+rating: "⭐ 4.8/5",
+link: "tools/canva-ai.html"
+},
+
+elevenlabs: {
+name: "ElevenLabs",
+category: "AI Voice",
+pricing: "Free / Paid plans",
+best: "AI voice generation and voiceovers",
+strength: "Natural-sounding AI-generated speech and voice tools",
+ease: "Easy",
+rating: "⭐ 4.9/5",
+link: "tools/elevenlabs.html"
+},
+
+"adobe-firefly": {
+name: "Adobe Firefly",
+category: "AI Image & Design",
+pricing: "Free limited access / Paid options",
+best: "Creative image generation and Adobe workflows",
+strength: "Generative AI tools designed for visual creative workflows",
+ease: "Easy",
+rating: "⭐ 4.8/5",
+link: "tools/adobe-firefly.html"
+},
+
+leonardo: {
+name: "Leonardo AI",
+category: "AI Image Generator",
+pricing: "Free / Paid plans",
+best: "Digital art, illustrations and creative visual concepts",
+strength: "Flexible AI image generation for detailed creative artwork",
+ease: "Easy to Moderate",
+rating: "⭐ 4.9/5",
+link: "tools/leonardo-ai.html"
+},
+
+ideogram: {
+name: "Ideogram AI",
+category: "AI Image Generator",
+pricing: "Free / Paid plans",
+best: "Posters, typography and images containing text",
+strength: "Creating AI-generated visuals where text is part of the design",
+ease: "Easy",
+rating: "⭐ 4.7/5",
+link: "tools/ideogram.html"
+}
+
+};
+
+
+function compareTools() {
+
+const tool1Value = document.getElementById("tool1").value;
+const tool2Value = document.getElementById("tool2").value;
+
+const message = document.getElementById("compareMessage");
+const result = document.getElementById("comparisonResult");
+
+
+if (!tool1Value || !tool2Value) {
+
+message.textContent = "Please select two AI tools to compare.";
+result.style.display = "none";
+
+return;
+
+}
+
+
+if (tool1Value === tool2Value) {
+
+message.textContent = "Please select two different AI tools.";
+result.style.display = "none";
+
+return;
+
+}
+
+
+message.textContent = "";
+
+const tool1 = tools[tool1Value];
+const tool2 = tools[tool2Value];
+
+
+document.getElementById("name1").textContent = tool1.name;
+document.getElementById("name2").textContent = tool2.name;
+
+document.getElementById("category1").textContent = tool1.category;
+document.getElementById("category2").textContent = tool2.category;
+
+document.getElementById("pricing1").textContent = tool1.pricing;
+document.getElementById("pricing2").textContent = tool2.pricing;
+
+document.getElementById("best1").textContent = tool1.best;
+document.getElementById("best2").textContent = tool2.best;
+
+document.getElementById("strength1").textContent = tool1.strength;
+document.getElementById("strength2").textContent = tool2.strength;
+
+document.getElementById("ease1").textContent = tool1.ease;
+document.getElementById("ease2").textContent = tool2.ease;
+
+document.getElementById("rating1").textContent = tool1.rating;
+document.getElementById("rating2").textContent = tool2.rating;
+
+
+document.getElementById("link1").innerHTML =
+'<a href="' + tool1.link + '" class="btn compare-tool-link">View ' +
+tool1.name +
+'</a>';
+
+document.getElementById("link2").innerHTML =
+'<a href="' + tool2.link + '" class="btn compare-tool-link">View ' +
+tool2.name +
+'</a>';
+
+
+result.style.display = "block";
+
+result.scrollIntoView({
+behavior: "smooth",
+block: "start"
+});
+
+}
+
+  </script>
+  <footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>🚀 Aicycle™</h3>
+
+<p>
+Discover, explore and compare AI tools to find the right solution for your needs.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="categories.html">Categories</a>
+<a href="compare.html">Compare Tools</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>Explore</h3>
+
+<div class="footer-links">
+
+<a href="tools/chatgpt.html">ChatGPT</a>
+<a href="tools/gemini.html">Google Gemini</a>
+<a href="tools/leonardo-ai.html">Leonardo AI</a>
+<a href="tools/ideogram.html">Ideogram AI</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>Legal</h3>
+
+<div class="footer-links">
+
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms & Conditions</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Aicycle™ (Aicycle.in) — All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>

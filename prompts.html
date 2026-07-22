@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Best AI Prompts for ChatGPT & AI Tools | Aicycle</title>
+
+<meta name="description" content="Discover ready-to-use AI prompts for ChatGPT and other AI tools. Explore prompts for writing, business, marketing, coding, productivity and more.">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+<div class="container flex-between">
+
+<div class="logo">
+<a href="index.html">
+🚀 <span>Aicycle™</span>
+</a>
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="categories.html">Categories</a>
+<a href="compare.html">Compare</a>
+<a href="prompts.html">Prompts</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<header class="hero">
+
+<div class="container">
+
+<h1>Powerful AI Prompts for Better Results</h1>
+
+<p>
+Discover ready-to-use prompts for ChatGPT and other AI assistants. Copy a prompt, customize it for your needs, and get started.
+</p>
+
+</div>
+
+</header>
+
+
+<!-- PROMPTS SECTION -->
+
+<section class="container">
+
+<h2>Popular AI Prompts</h2>
+
+<div class="grid">
+<!-- WRITING PROMPT -->
+
+<div class="card prompt-card">
+
+<h3>✍️ Blog Post Generator</h3>
+
+<p>Use this prompt to create a detailed and well-structured blog article.</p>
+
+<div class="prompt-box" id="prompt1">
+Write a detailed and engaging blog post about [TOPIC] for [TARGET AUDIENCE]. Use a natural, human-friendly tone. Include a compelling introduction, clear headings and subheadings, practical examples, key takeaways, and an FAQ section. Make the article informative and easy to understand.
+</div>
+
+<button class="btn" onclick="copyPrompt('prompt1', this)">
+Copy Prompt
+</button>
+
+</div>
+
+
+<!-- BUSINESS PROMPT -->
+
+<div class="card prompt-card">
+
+<h3>💼 Business Idea Generator</h3>
+
+<p>Generate practical business ideas based on your interests and budget.</p>
+
+<div class="prompt-box" id="prompt2">
+Act as a business consultant. Suggest 10 practical business ideas for someone interested in [INDUSTRY] with a starting budget of [BUDGET] in [LOCATION]. For each idea, explain the target customers, how the business can make money, estimated startup requirements, and the first three steps to get started.
+</div>
+
+<button class="btn" onclick="copyPrompt('prompt2', this)">
+Copy Prompt
+</button>
+
+</div>
+
+
+<!-- MARKETING PROMPT -->
+
+<div class="card prompt-card">
+
+<h3>📢 Social Media Content Creator</h3>
+
+<p>Create engaging social media content for your business or brand.</p>
+
+<div class="prompt-box" id="prompt3">
+Act as a social media marketing expert. Create 10 engaging social media post ideas for a [BUSINESS TYPE] targeting [TARGET AUDIENCE]. For each idea, provide a short caption, a call to action, and relevant hashtags. Keep the tone natural and avoid exaggerated marketing claims.
+</div>
+
+<button class="btn" onclick="copyPrompt('prompt3', this)">
+Copy Prompt
+</button>
+
+</div>
+
+
+<!-- CODING PROMPT -->
+
+<div class="card prompt-card">
+
+<h3>💻 Coding Assistant</h3>
+
+<p>Get help understanding and improving your code.</p>
+
+<div class="prompt-box" id="prompt4">
+Act as an experienced software developer. Review the following [PROGRAMMING LANGUAGE] code. Identify bugs, security concerns, and performance issues. Explain each problem in simple language and provide an improved version of the code. Do not change functionality unless necessary.
+
+[PASTE YOUR CODE HERE]
+</div>
+
+<button class="btn" onclick="copyPrompt('prompt4', this)">
+Copy Prompt
+</button>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>🚀 Aicycle™</h3>
+
+<p>
+Discover AI tools, compare platforms, explore useful guides, and find ready-to-use AI prompts.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="categories.html">Categories</a>
+<a href="compare.html">Compare Tools</a>
+<a href="prompts.html">AI Prompts</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>Legal</h3>
+
+<div class="footer-links">
+
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms & Conditions</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Aicycle™ (Aicycle.in) — All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- COPY PROMPT SCRIPT -->
+
+<script>
+
+function copyPrompt(promptId, button) {
+
+const promptText =
+document.getElementById(promptId).innerText;
+
+navigator.clipboard.writeText(promptText).then(function() {
+
+const originalText = button.innerText;
+
+button.innerText = "✓ Copied!";
+
+setTimeout(function() {
+button.innerText = originalText;
+}, 2000);
+
+}).catch(function() {
+
+button.innerText = "Copy failed";
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

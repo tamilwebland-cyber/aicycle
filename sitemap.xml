@@ -171,4 +171,10 @@
 <url>
   <loc>https://aicycle.in/prompts.html</loc>
 </url>
+<url>
+    <loc>https://aicycle.in/tools/manus-ai.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 </urlset>

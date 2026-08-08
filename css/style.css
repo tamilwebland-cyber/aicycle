@@ -3,34 +3,19 @@
 ===================================================== */
 
 :root{
---bg:#07111f;
---bg2:#0d1728;
---card:#17233c;
---card2:#223456;
---primary:#3b82f6;
---secondary:#8b5cf6;
---success:#22c55e;
---warning:#f59e0b;
---danger:#ef4444;
---white:#ffffff;
---text:#d7deea;
+--bg:#080A1A;
+--bg2:#10132B;
+--card:#171B3A;
+--card2:#22275A;
+--primary:#00C2FF;
+--secondary:#8B5CF6;
+--success:#22C55E;
+--warning:#F59E0B;
+--danger:#EF4444;
+--white:#FFFFFF;
+--text:#CBD5E1;
 --radius:18px;
---shadow:0 12px 35px rgba(0,0,0,.35);
-}
-:root{
-  --bg:#07111f;
-  --bg2:#0d1728;
-  --card:#17233c;
-  --card2:#223456;
-  --primary:#3b82f6;
-  --secondary:#8b5cf6;
-  --success:#22c55e;
-  --warning:#f59e0b;
-  --danger:#ef4444;
-  --white:#ffffff;
-  --text:#d7deea;
-  --radius:18px;
-  --shadow:0 12px 35px rgba(0,0,0,.35);
+--shadow:0 12px 35px rgba(0,0,0,.40);
 }
 
 /* =========================
